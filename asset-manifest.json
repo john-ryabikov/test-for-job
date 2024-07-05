@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/test-for-job/static/css/main.7fb35f8e.css",
-    "main.js": "/test-for-job/static/js/main.8cf67791.js",
+    "main.js": "/test-for-job/static/js/main.bf74c5ef.js",
     "static/media/PTRootUI-Light.woff": "/test-for-job/static/media/PTRootUI-Light.464d1babb9d526d11c91.woff",
     "static/media/PTRootUI-Medium.woff": "/test-for-job/static/media/PTRootUI-Medium.035ef44bcb193531bc00.woff",
     "static/media/PTRootUI-Bold.woff": "/test-for-job/static/media/PTRootUI-Bold.89538329b01c3c315f8f.woff",
@@ -16,10 +16,10 @@
     "static/media/BebasNeueCyrillic.woff2": "/test-for-job/static/media/BebasNeueCyrillic.a3cebdc58d79c5fc84ca.woff2",
     "index.html": "/test-for-job/index.html",
     "main.7fb35f8e.css.map": "/test-for-job/static/css/main.7fb35f8e.css.map",
-    "main.8cf67791.js.map": "/test-for-job/static/js/main.8cf67791.js.map"
+    "main.bf74c5ef.js.map": "/test-for-job/static/js/main.bf74c5ef.js.map"
   },
   "entrypoints": [
     "static/css/main.7fb35f8e.css",
-    "static/js/main.8cf67791.js"
+    "static/js/main.bf74c5ef.js"
   ]
 }
