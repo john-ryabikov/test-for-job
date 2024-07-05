@@ -1,0 +1,298 @@
+.popup {
+    @include flex-column();
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 99;
+    overflow: auto;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s;
+    &_open {
+        opacity: 1;
+        pointer-events: all;
+        transition: all 0.4s;
+    }
+    &__window {
+        @include flex-column();
+        justify-content: flex-start;
+        width: 750px;
+        padding-top: 60px;
+        padding-bottom: 40px;
+        background-color: #f5f7f7;
+    }
+    &__label {
+        position: absolute;
+        top: 0;
+        left: 42px;
+        font-family: 'PT Root UI';
+        font-weight: 500;
+        font-size: 16px;
+        padding: 10px;
+        background-color: #01b9c5;
+        color: #ffffff;
+        line-height: 130%;
+        letter-spacing: 0.02em;
+    }
+    &__close {
+        @include flex-column();
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: all 0.3s;
+        &:hover {
+            background-color: #b6b6b6;
+        }
+    }
+    &__title {
+        position: relative;
+        font-family: 'Rubik';
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 130%;
+        text-transform: uppercase;
+        color: #12191d;
+        text-align: center;
+        margin-bottom: 30px;
+        b {
+            color: #01B9C5
+        }
+    }
+    &__text-sale {
+        position: relative;
+        font-size: 24px;
+        text-align: center;
+        &_1 {
+            display: block;
+            font-family: 'PT Root UI';
+            font-weight: 500;
+            line-height: 130%;
+            color: #12191d;
+            margin-bottom: 8px;
+            b {
+                font-family: 'Rubik';
+                font-weight: 500;
+                color: #2d3242;
+            }
+        }
+        &_2 {
+            font-family: 'PT Root UI';
+            font-weight: bold;
+            border: 1.50px solid #01b9c5;
+            border-radius: 30px;
+            padding: 12px 28px 16px 30px;
+            width: 458px;
+            height: 59px;
+            b {
+                color: #01B9C5;
+            }
+        }
+    }
+    &__form {
+        @include flex-column();
+        justify-content: flex-start;
+        width: 670px;
+    }
+    &__form-txt {
+        position: relative;
+        font-family: 'PT Root UI';
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 130%;
+        color: #12191d;
+        width: 100%;
+        text-align: start;
+        margin-top: 60px;
+        margin-bottom: 20px;
+    }
+    &__form-prices {
+        @include flex-row();
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    &__form-label {
+        @include flex-column();
+        width: 210px;
+        cursor: pointer;
+    }
+    &__form-input-radio {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        &:checked + .popup__form-input {
+            border: 1.50px solid #01b9c5;
+        }
+        &:checked ~ .popup__form-input .popup__form-input-img {
+            display: block;
+        }
+        &:checked ~ .popup__form-price-cont {
+            border: 2px solid #01b9c5;
+            background-color: rgba(1, 185, 197, 0.05);
+        }
+    }
+    &__form-input {
+        @include flex-column();
+        position: absolute;
+        top: 26px;
+        right: 22px;
+        width: 22px;
+        height: 22px;
+        border-radius: 11px;
+        border: 1.50px solid #555965;
+        z-index: 90;
+    }
+    &__form-input-img {
+        display: none;
+    }
+    &__form-price-cont {
+        @include flex-column();
+        justify-content: flex-start;
+        padding: 26px 22px 10px 26px;
+        width: 100%;
+        border: 2px solid #e7eaf1;
+        border-radius: 20px;
+        background-color: #ffffff;
+    }
+    &__price-days {
+        position: relative;
+        font-family: 'Bebas Neue Cyrillic';
+        font-weight: normal;
+        font-size: 26px;
+        width: 100%;
+        line-height: 100%;
+        color: #2d3242;
+        text-align: start;
+        margin-bottom: 12px;
+    }
+    &__prev-price-name {
+        position: relative;
+        width: 100%;
+        text-align: start;
+    }
+    &__price-br {
+        width: 134px;
+        height: 1px;
+        background-color: #e7eaf1;
+        margin-top: 16px;
+        margin-bottom: 10px;
+    }
+    &__price-sale {
+        @include flex-row();
+        justify-content: flex-start;
+        width: 100%;
+        color: #2d3242;
+        &_cost {
+            font-family: 'PT Root UI';
+            font-weight: bold;
+            font-size: 46px;
+            line-height: 110%;
+        }
+        &_img {
+            width: 50px;
+            margin-bottom: 25px;
+            margin-left: 1px;
+        }
+    }
+    &__form-btn {
+        @include flex-column();
+        font-family: 'Rubik';
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 100%;
+        color: #ffffff;
+        border-radius: 30px;
+        width: 310px;
+        height: 60px;
+        background-color: #fd4d35;
+        cursor: pointer;
+        transition: all 0.3s;
+        &:hover {
+            transform: scale(1.05, 1.05);
+        }
+    }
+}
+
+@media only screen and (min-width: 0) and (max-width: 761px) {
+    .popup {
+        justify-content: flex-start;
+        padding-top: 60px;
+        padding-bottom: 40px;
+        &__window {
+            width: 335px;
+        }
+        &__label {
+            left: 0;
+            font-size: 14px;
+            padding: 8px;
+        }
+        &__close {
+            top: 10px;
+            right: 10px;
+        }
+        &__title {
+            font-size: 24px;
+            text-align: start;
+            margin-bottom: 22px;
+            width: 245px;
+        }
+        &__text-sale {
+            font-size: 15px;
+        }
+        &__form {
+            width: 300px;
+        }
+        &__form-txt {
+            font-size: 15px;
+            margin-top: 40px;
+            margin-bottom: 14px;
+        }
+        &__form-prices {
+            @include flex-column();
+            justify-content: flex-start;
+            margin-bottom: 40px;
+        }
+        &__form-label {
+            width: 100%;
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        &__form-price-cont {
+            height: 133px;
+            padding: 24px 20px 27px 20px;
+        }
+        &__price-days {
+            font-size: 24px;
+            margin-bottom: 6px;
+        }
+        &__prev-price-name {
+            position: absolute;
+            bottom: 20px;
+            left: 220px;
+        }
+        &__price-br {
+            display: none
+        }
+        &__price-sale {
+            &_cost {
+                font-size: 44px;
+            }
+            &_img {
+                width: 40px;
+                margin-bottom: 15px;
+            }
+        }
+        &__form-btn {
+            width: 100%;
+        }
+    }
+}

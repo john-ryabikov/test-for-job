@@ -1,0 +1,82 @@
+/*Стандартные настройки страницы 
+=======================================*/
+
+//Шрифты   ---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+@import "fonts/font-faces";
+
+html {font-family: 'PT Root UI, sans-serif'; font-weight: normal; overflow-x: hidden; color: #2D3242;}
+body {margin: 0; padding: 0; overflow-x: hidden; background-color: #F5F7F7;}
+* {box-sizing: border-box;}
+a {text-decoration: none;}
+p {margin: 0;user-select: none;}
+input::placeholder {font-family: 'PT Root UI, sans-serif'; font-weight: 200; color: rgba(255, 255, 255, 0.70); font-size: 18px;}
+textarea::placeholder {font-family: 'PT Root UI, sans-serif'; font-weight: 200; color: rgba(255, 255, 255, 0.70); font-size: 18px;}
+h1,h2,h3,h4,h5,h6 {font-weight: inherit; font-size: inherit; user-select: none; margin: 0;padding: 0;}
+ul[class],ol[class] {list-style: none;margin: 0;}
+.uncor {position: absolute; top: 20px; left: 0;}
+img {pointer-events: none}
+button {background: none; border: none; padding: 0; font-family: sans-serif;}
+
+//Загрузка   ---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.loading {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #000000;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+//Миксины   --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+@import "functions/mixins";
+
+//Граница страницы сайта   -----------------------------------------------------------------------------------------------------------------------------------------
+.main {
+    //@include border();
+    @include flex-column();
+    width: 100vw;
+}
+.overflow-lock {
+    overflow-y: hidden;
+}
+
+//Стандартные настройки контейнера   -------------------------------------------------------------------------------------------------------------------------------
+.container {
+    //@include border();
+    @include flex-column();
+    width: 1180px;
+}
+@media only screen and (min-width: 0) and (max-width: 761px) {
+    .container {
+        @include flex-column();
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/*ВСПЛЫВАЮЩЕЕ ОКНО
+=======================================*/
+
+@import "components/PopUp";
+
+/*ШАПКА САЙТА
+=======================================*/
+
+@import "components/Header";
+
+/*ГЛАВНЫЙ ЭКРАН
+=======================================*/
+
+@import "components/Section1";
+
+/*UI
+=======================================*/
+
+@import "UI/PriceCard";
+@import "UI/PriceForm";

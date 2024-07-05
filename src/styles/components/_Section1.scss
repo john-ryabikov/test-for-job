@@ -1,0 +1,90 @@
+.main-block {
+    @include flex-column();
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    padding-bottom: 110px;
+    &__h {
+        position: relative;
+        font-family: "Rubik";
+        font-weight: 700;
+        font-size: 40px;
+        text-transform: uppercase;
+        letter-spacing: 0.01em;
+        margin-top: 30px;
+    }
+    &__cont {
+        @include flex-row();
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 60px;
+    }
+    &__prices {
+        @include flex-column();
+        align-items: center;
+        justify-content: flex-start;
+        width: 585px;
+        &_window {
+            justify-content: center;
+            height: 458px;
+        }
+    }
+    &__price-row {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        &:last-child {
+            margin-top: 40px;
+        }
+    }
+    &__txt {
+        position: relative;
+        font-family: 'PT Root UI';
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 130%;
+        margin-top: 13px;
+        text-align: start;
+    }
+}
+
+@media only screen and (min-width: 0) and (max-width: 761px) {
+    .main-block {
+        padding-bottom: 110px;
+        &__h {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        &__cont {
+            @include flex-column();
+            justify-content: flex-start;
+            margin-top: 20px;
+        }
+        &__prices {
+            align-items: flex-start;
+            width: 100%;
+            margin-top: -10px;
+            &_window {
+                justify-content: flex-start;
+                height: 630px;
+            }
+        }
+        &__img {
+            position: relative;
+            width: 277px;
+        }
+        &__price-row {
+            @include flex-column();
+            align-items: center;
+            justify-content: flex-start;
+        }
+        &__txt {
+            width: 285px;
+            font-size: 14px;
+        }
+    }
+}
