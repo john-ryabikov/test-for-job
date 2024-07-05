@@ -31,9 +31,7 @@ const Section1 = ({ prices, seconds }:SectionProps) => {
           <img className="main-block__img" src="img/Section-1/main_img.png" alt=""/>
           <div className="main-block__prices">
               <div className="main-block__prices main-block__prices_window">
-                {prices.length === 0 ? (
-                <div className='loading'></div>
-                ) : (
+                {prices.length === 0 ? <div className='loading'></div> : (
                   <>
                     {!isEndless && <PriceBlockSale prices={prices.slice(0, 4)} seconds={seconds}/>}
                     {isEndless && <PriceBlock prices={prices.slice(4, 8)}/>}
