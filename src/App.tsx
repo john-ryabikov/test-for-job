@@ -9,7 +9,7 @@ import PopUp from './components/PopUp/PopUp';
 function App() {
 
   const [prices, setPrices] = useState<Prices[]>([])
-  const [seconds, setSeconds] = useState(40)
+  const [seconds, setSeconds] = useState(120)
 
   const minutesString = String(Math.floor(seconds / 60)).padStart(2, "0")
   const secondsString = String(seconds % 60).padStart(2, "0")
