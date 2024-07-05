@@ -13,7 +13,7 @@ function App() {
 
   const minutesString = String(Math.floor(seconds / 60)).padStart(2, "0")
   const secondsString = String(seconds % 60).padStart(2, "0")
-  let isFired = seconds < 31
+  let isFired = seconds
 
   useEffect(() => {
     axios.get<Prices[]>("https://t-pay.iqfit.app/subscribe/list-test").then((res) => {
