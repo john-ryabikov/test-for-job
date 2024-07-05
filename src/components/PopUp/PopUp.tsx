@@ -53,7 +53,7 @@ const PopUp = ({ prices, seconds }: PopupProps) => {
                                     onChange={() => {setType(price.name)}} 
                                 />
                                 <div className="popup__form-input">
-                                    <img className="popup__form-input-img"src="img/Popup/checked_icon.svg" alt="O"/>
+                                    <img className="popup__form-input-img"src="img/PopUp/checked_icon.svg" alt="O"/>
                                 </div>
                                 <div className="popup__form-price-cont">
                                     <p className="popup__price-days">{price.name}</p>

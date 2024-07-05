@@ -17,7 +17,7 @@ const Timer = ({minutes, seconds, isFired}: TimerProps) => {
             <span className={classTimer(seconds)}>{minutes}</span>
             <span className='timer__count-name'>минут</span>
         </p>
-        {isFired ? (<img src="/img/Header/sub_icon_red.svg" alt=":"/>) : (<img src="/img/Header/sub_icon.svg" alt=":"/>)}
+        {isFired ? (<img src="img/Header/sub_icon_red.svg" alt=":"/>) : (<img src="img/Header/sub_icon.svg" alt=":"/>)}
         <p className='timer__count'>
             <span className={classTimer(seconds)}>{seconds}</span>
             <span className='timer__count-name'>секунд</span>
