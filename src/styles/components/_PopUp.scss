@@ -132,6 +132,7 @@
         }
         &:checked ~ .popup__form-input .popup__form-input-img {
             display: block;
+            width: 12px;
         }
         &:checked ~ .popup__form-price-cont {
             border: 2px solid #01b9c5;
