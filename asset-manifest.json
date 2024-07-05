@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/test-for-job/static/css/main.e4e88fd0.css",
+    "main.css": "/test-for-job/static/css/main.85106cfb.css",
     "main.js": "/test-for-job/static/js/main.aac0e9f6.js",
     "static/media/PTRootUI-Light.woff": "/test-for-job/static/media/PTRootUI-Light.464d1babb9d526d11c91.woff",
     "static/media/PTRootUI-Medium.woff": "/test-for-job/static/media/PTRootUI-Medium.035ef44bcb193531bc00.woff",
@@ -15,11 +15,11 @@
     "static/media/BebasNeueCyrillic.woff": "/test-for-job/static/media/BebasNeueCyrillic.baa8675360be707671ef.woff",
     "static/media/BebasNeueCyrillic.woff2": "/test-for-job/static/media/BebasNeueCyrillic.a3cebdc58d79c5fc84ca.woff2",
     "index.html": "/test-for-job/index.html",
-    "main.e4e88fd0.css.map": "/test-for-job/static/css/main.e4e88fd0.css.map",
+    "main.85106cfb.css.map": "/test-for-job/static/css/main.85106cfb.css.map",
     "main.aac0e9f6.js.map": "/test-for-job/static/js/main.aac0e9f6.js.map"
   },
   "entrypoints": [
-    "static/css/main.e4e88fd0.css",
+    "static/css/main.85106cfb.css",
     "static/js/main.aac0e9f6.js"
   ]
 }
